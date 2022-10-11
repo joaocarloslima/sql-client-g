@@ -33,7 +33,7 @@
                <content>
                   <VBox prefHeight="286.0" prefWidth="140.0">
                      <children>
-                        <TextField fx:id="textFieldUser" promptText="user" text="pf1389" />
+                        <TextField fx:id="textFieldUser" promptText="user" text="root" />
                         <PasswordField fx:id="passwordFieldSenha" promptText="pass">
                            <opaqueInsets>
                               <Insets />
