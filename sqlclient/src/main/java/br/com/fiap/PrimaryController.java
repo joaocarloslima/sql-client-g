@@ -27,16 +27,21 @@ public class PrimaryController {
                     textFieldUser.getText(), 
                     passwordFieldSenha.getText()
             );
+            String sql = sanitizar(textAreaSql.getText());
 
-            var comando = con.prepareStatement(textAreaSql.getText());
+            var comando = con.prepareStatement(sql);
             comando.executeQuery();
 
-            status.setText("Comando executado: " + textAreaSql.getText());
+            status.setText("Comando executado: " + sql);
             con.close();
 
         }catch(SQLException e){
             status.setText("ERRO: " + e.getMessage());
         }
+    }
+
+    private String sanitizar(String sql) {
+        return sql.replaceAll(";", "").replaceAll("\"", "'");
     }
 
 }
