@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
@@ -23,7 +24,7 @@
                <content>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <ListView fx:id="historico" prefHeight="256.0" prefWidth="180.0" />
+                        <ListView fx:id="historico" onMouseClicked="#resgatarHistorico" prefHeight="256.0" prefWidth="180.0" />
                      </children>
                   </VBox>
                </content>
@@ -41,7 +42,7 @@
                               <Insets bottom="10.0" top="10.0" />
                            </VBox.margin>
                         </PasswordField>
-                        <TextField fx:id="textFieldUrl" promptText="url" text="jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl" />
+                        <TextField fx:id="textFieldUrl" promptText="url" text="jdbc:mysql://localhost:3306/test" />
                      </children>
                   </VBox>
                </content>
@@ -77,4 +78,7 @@
          </children>
       </HBox>
    </bottom>
+   <center>
+      <TableView fx:id="tabela" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
